@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SimpleLayerViewController: UIViewController {
 
     @IBOutlet weak var viewForLayer: UIView!
     
