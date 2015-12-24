@@ -906,7 +906,7 @@
                                                         <constraint firstAttribute="width" constant="80" id="bfI-oh-bb2"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="ShadowColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="Bgr-KK-PkT"/>
+                                                        <action selector="shadowColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="NPg-HQ-FYV"/>
                                                     </connections>
                                                 </slider>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-kd-A1J">
