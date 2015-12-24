@@ -199,6 +199,22 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         shadowOffsetValueLabel.text = "Width : \(Int(width)), Height : \(Int(height))"
     }
 
+    @IBAction func magnificationFilterSegmentedControlChanged(sender: UISegmentedControl) {
+        let filterEnum = MagnificationFilter(rawValue: sender.selectedSegmentIndex)!
+        var filter = ""
+        
+        switch filterEnum {
+        case .Linear:
+            filter = kCAFilterLinear
+        case .Nearest:
+            filter = kCAFilterNearest
+        case .Trilinear:
+            filter = kCAFilterTrilinear
+        }
+        
+        layerViewController.layer.magnificationFilter = filter
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

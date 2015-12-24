@@ -995,6 +995,9 @@
                                                         <segment title="Nearest"/>
                                                         <segment title="Trilinear"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="magnificationFilterSegmentedControlChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="UCz-e6-MA1"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnification Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7q-hJ-CMP">
                                                     <rect key="frame" x="16" y="11" width="146" height="21"/>
