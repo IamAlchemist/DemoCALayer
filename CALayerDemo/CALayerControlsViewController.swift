@@ -72,6 +72,8 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         updateSliderValueLabels()
     }
     
+    // MARK: - helper
+    
     func updateSliderValueLabels(){
         for slider in Slider.Opacity.rawValue...Slider.ShadowOpacity.rawValue {
             updateSliderValueLabel(Slider(rawValue: slider)!)
@@ -138,6 +140,8 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         return (color: color, label: label)
     }
     
+    // MARK: - IBActions
+    
     @IBAction func switchChanged(sender: UISwitch) {
         let theSwitch = Switch(rawValue: (switches as NSArray).indexOfObject(sender))!
         
@@ -171,12 +175,25 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
     }
     
     @IBAction func borderColorSliderChanged(sender: UISlider) {
+        let colorAndLabel = colorAndLabelForSliders(borderColorSliders)
+        layerViewController.layer.borderColor = colorAndLabel.color
+        borderColorValueLabel.text = colorAndLabel.label
     }
+    
     @IBAction func backgroundColorSliderChanged(sender: UISlider) {
+        let colorAndLabel = colorAndLabelForSliders(backgroundColorSliders)
+        layerViewController.layer.backgroundColor = colorAndLabel.color
+        backgroundColorValueLabel.text = colorAndLabel.label
     }
+    
     @IBAction func shadowColorSliderChanged(sender: UISlider) {
+        let colorAndLabel = colorAndLabelForSliders(shadowColorSliders)
+        layerViewController.layer.shadowColor = colorAndLabel.color
+        shadowColorValueLabel.text = colorAndLabel.label
     }
+    
     @IBAction func shadowOffsetSliderChanged(sender: AnyObject) {
+        
     }
 
     // MARK: - UITableViewDelegate
