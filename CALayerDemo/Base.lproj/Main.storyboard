@@ -711,14 +711,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="NWN-bY-SQP">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="NWN-bY-SQP">
                                                     <rect key="frame" x="503" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="3x1-cq-uhN"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="borderColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="En8-QW-ZTd"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jGb-i0-wsj">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="jGb-i0-wsj">
                                                     <rect key="frame" x="413" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
@@ -729,10 +732,16 @@
                                                             <exclude reference="Xby-Tj-e6o"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="borderColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="Z8e-iK-PrP"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="alH-9h-6Nl">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="alH-9h-6Nl">
                                                     <rect key="frame" x="323" y="7" width="84" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="borderColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="PfU-W9-n70"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Border color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2u-uf-SMD">
                                                     <rect key="frame" x="16" y="8" width="71" height="15"/>
@@ -796,14 +805,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="dQD-r0-pxd">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="7" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="dQD-r0-pxd">
                                                     <rect key="frame" x="503" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="awk-9s-V4h"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="backgroundColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="ekH-pG-wUr"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Idh-BG-Mv2">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="71" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Idh-BG-Mv2">
                                                     <rect key="frame" x="413" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
@@ -814,10 +826,16 @@
                                                             <exclude reference="adv-TV-BlN"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="backgroundColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="ZKf-m7-6zQ"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eSE-JL-Rhu">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="eSE-JL-Rhu">
                                                     <rect key="frame" x="323" y="7" width="84" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="backgroundColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="ho2-lg-Slz"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AQ-0W-Tor">
                                                     <rect key="frame" x="16" y="8" width="100" height="15"/>
@@ -881,14 +899,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sup-Dc-4uf">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Sup-Dc-4uf">
                                                     <rect key="frame" x="503" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="bfI-oh-bb2"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="ShadowColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="Bgr-KK-PkT"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-kd-A1J">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-kd-A1J">
                                                     <rect key="frame" x="413" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
@@ -899,10 +920,16 @@
                                                             <exclude reference="TV5-E4-02e"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="shadowColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="1AX-lr-pvd"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Omy-eD-bEc">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Omy-eD-bEc">
                                                     <rect key="frame" x="323" y="7" width="84" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="shadowColorSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="PMG-Qb-52P"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shadow color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlQ-Ap-6Ep">
                                                     <rect key="frame" x="16" y="8" width="77" height="15"/>
@@ -966,14 +993,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="dof-Z9-K7Y">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dof-Z9-K7Y">
                                                     <rect key="frame" x="503" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="pyZ-Kf-yCY"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="shadowOffsetSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="1LN-eW-dE2"/>
+                                                    </connections>
                                                 </slider>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QNE-nj-Xm9">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="QNE-nj-Xm9">
                                                     <rect key="frame" x="413" y="7" width="84" height="31"/>
                                                     <animations/>
                                                     <constraints>
@@ -984,6 +1014,9 @@
                                                             <exclude reference="Fiw-7s-Zuq"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="shadowOffsetSliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="Lqs-rq-azx"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shadow Offset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d03-UF-owR">
                                                     <rect key="frame" x="16" y="8" width="84" height="15"/>

@@ -129,6 +129,15 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         }
     }
     
+    func colorAndLabelForSliders(sliders: [UISlider]) -> (color: CGColorRef, label: String) {
+        let red = CGFloat(sliders[0].value)
+        let green = CGFloat(sliders[1].value)
+        let blue = CGFloat(sliders[2].value)
+        let color = UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: 1.0).CGColor
+        let label = "RGB: \(Int(red)), \(Int(green)), \(Int(blue))"
+        return (color: color, label: label)
+    }
+    
     @IBAction func switchChanged(sender: UISwitch) {
         let theSwitch = Switch(rawValue: (switches as NSArray).indexOfObject(sender))!
         
@@ -161,6 +170,15 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         updateSliderValueLabel(slider)
     }
     
+    @IBAction func borderColorSliderChanged(sender: UISlider) {
+    }
+    @IBAction func backgroundColorSliderChanged(sender: UISlider) {
+    }
+    @IBAction func shadowColorSliderChanged(sender: UISlider) {
+    }
+    @IBAction func shadowOffsetSliderChanged(sender: AnyObject) {
+    }
+
     // MARK: - UITableViewDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
