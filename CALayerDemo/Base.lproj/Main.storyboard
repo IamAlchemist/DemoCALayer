@@ -464,6 +464,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="114" id="g7d-AD-2g7"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="sliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="tdQ-vw-YWY"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFm-xE-z8d">
                                                     <rect key="frame" x="451" y="22" width="0.0" height="0.0"/>
@@ -513,6 +516,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="114" id="ByB-uc-a7P"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="sliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="TsC-ed-tnU"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ii-j4-x3o">
                                                     <rect key="frame" x="451" y="22" width="0.0" height="0.0"/>
@@ -562,6 +568,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="114" id="bLQ-x6-fIU"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="sliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="G6W-pX-Ynh"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcC-Bg-PVa">
                                                     <rect key="frame" x="451" y="22" width="0.0" height="0.0"/>
@@ -605,12 +614,15 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-op-ht6">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.75" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-op-ht6">
                                                     <rect key="frame" x="469" y="7" width="118" height="31"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="114" id="Gp0-2t-ZDc"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="sliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="P0x-eu-uXw"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25h-3q-cTa">
                                                     <rect key="frame" x="451" y="22" width="0.0" height="0.0"/>
@@ -654,12 +666,15 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-Yh-GVF">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-Yh-GVF">
                                                     <rect key="frame" x="469" y="7" width="118" height="31"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="114" id="ywc-9u-Na5"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="sliderChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="aWC-34-VnE"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g8-r4-IzC">
                                                     <rect key="frame" x="451" y="22" width="0.0" height="0.0"/>

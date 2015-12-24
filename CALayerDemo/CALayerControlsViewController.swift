@@ -142,6 +142,25 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         }
     }
     
+    @IBAction func sliderChanged(sender: UISlider) {
+        let slider = Slider(rawValue: sliders.indexOf(sender)!)!
+        
+        switch slider {
+        case .Opacity:
+            layerViewController.layer.opacity = sender.value
+        case .CornerRadius:
+            layerViewController.layer.cornerRadius = CGFloat(sender.value)
+        case .BorderWidth:
+            layerViewController.layer.borderWidth = CGFloat(sender.value)
+        case .ShadowOpacity:
+            layerViewController.layer.shadowOpacity = sender.value
+        case .ShadowRadius:
+            layerViewController.layer.shadowRadius = CGFloat(sender.value)
+        }
+        
+        updateSliderValueLabel(slider)
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
