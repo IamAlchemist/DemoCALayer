@@ -250,7 +250,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contents Gravity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wjs-E4-Fgl">
-                                                    <rect key="frame" x="15" y="12" width="110" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="122" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -610,8 +610,8 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="x8l-7z-pON"/>
                                                     <exclude reference="QQK-bj-g1s"/>
+                                                    <exclude reference="x8l-7z-pON"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -759,14 +759,14 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="pN2-1D-v0X"/>
                                                     <exclude reference="5JL-G8-vy4"/>
                                                     <exclude reference="JIt-1I-Aec"/>
                                                     <exclude reference="JuC-JG-3Iy"/>
+                                                    <exclude reference="pN2-1D-v0X"/>
                                                     <exclude reference="tgf-xd-kas"/>
-                                                    <exclude reference="gNn-Xg-99Z"/>
                                                     <exclude reference="GKO-Jf-zFG"/>
                                                     <exclude reference="LVO-pn-Z0H"/>
+                                                    <exclude reference="gNn-Xg-99Z"/>
                                                     <exclude reference="i7w-PE-kFc"/>
                                                 </mask>
                                             </variation>
@@ -837,13 +837,13 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="lAx-lm-hoL"/>
+                                                    <exclude reference="8ef-NS-jzA"/>
                                                     <exclude reference="CvJ-jg-D2H"/>
+                                                    <exclude reference="lAx-lm-hoL"/>
                                                     <exclude reference="ol9-bq-1tX"/>
                                                     <exclude reference="wV0-hg-hBo"/>
-                                                    <exclude reference="8ef-NS-jzA"/>
-                                                    <exclude reference="Opj-2x-PTC"/>
                                                     <exclude reference="DSG-6y-7SH"/>
+                                                    <exclude reference="Opj-2x-PTC"/>
                                                     <exclude reference="PKa-WW-oGW"/>
                                                     <exclude reference="bJG-JA-9mv"/>
                                                 </mask>
@@ -908,14 +908,14 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="iwT-ec-q6i"/>
                                                     <exclude reference="0XG-ie-L0g"/>
-                                                    <exclude reference="x6h-eB-M5t"/>
-                                                    <exclude reference="gV0-MN-7Ip"/>
                                                     <exclude reference="2Be-cD-eIU"/>
-                                                    <exclude reference="wHZ-rU-4fg"/>
+                                                    <exclude reference="gV0-MN-7Ip"/>
+                                                    <exclude reference="iwT-ec-q6i"/>
+                                                    <exclude reference="x6h-eB-M5t"/>
                                                     <exclude reference="R9w-ER-VjW"/>
                                                     <exclude reference="sdH-7P-zlh"/>
+                                                    <exclude reference="wHZ-rU-4fg"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
