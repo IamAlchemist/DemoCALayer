@@ -13,6 +13,7 @@ class CALayerViewController : UIViewController
     @IBOutlet weak var viewForLayer: UIView!
     
     let layer = CALayer()
+    let star = UIImage(named: "star")?.CGImage
     
     override func viewDidLoad()
     {
@@ -24,7 +25,7 @@ class CALayerViewController : UIViewController
     func setupLayer()
     {
         layer.frame = viewForLayer.bounds
-        layer.contents = UIImage(named: "star")?.CGImage
+        layer.contents = star
         layer.contentsGravity = kCAGravityCenter
         layer.backgroundColor = swiftGreenColor.CGColor
         layer.cornerRadius = 100

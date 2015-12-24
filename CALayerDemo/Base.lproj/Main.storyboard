@@ -341,6 +341,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgA-Ha-hRN">
                                                     <rect key="frame" x="535" y="6" width="51" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="3wz-kF-0ie"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <animations/>
@@ -378,6 +381,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O9S-nn-wWT">
                                                     <rect key="frame" x="535" y="6" width="51" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="Fic-lf-Mht"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <animations/>
@@ -415,6 +421,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-oY-mgw">
                                                     <rect key="frame" x="535" y="6" width="51" height="31"/>
                                                     <animations/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="5bE-6A-8Zt" eventType="valueChanged" id="eXu-1O-PXy"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <animations/>

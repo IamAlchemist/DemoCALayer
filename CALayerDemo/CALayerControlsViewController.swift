@@ -129,6 +129,18 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         }
     }
     
+    @IBAction func switchChanged(sender: UISwitch) {
+        let theSwitch = Switch(rawValue: (switches as NSArray).indexOfObject(sender))!
+        
+        switch theSwitch {
+        case .DisplayContents:
+            layerViewController.layer.contents = sender.on ? layerViewController.star : nil
+        case .GeometryFlipped:
+            layerViewController.layer.geometryFlipped = sender.on
+        case .Hidden:
+            layerViewController.layer.hidden = sender.on
+        }
+    }
     
     // MARK: - UITableViewDelegate
     
