@@ -9,6 +9,7 @@
 import UIKit
 
 let swiftOrangeColor = UIColor(red: 248/255, green: 96/255.0, blue: 47/255.0, alpha: 1.0)
+let swiftGreenColor = UIColor(red: 11/255.0, green: 71/255.0, blue: 8/255.0, alpha: 1.0)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -26,7 +26,7 @@ class CALayerViewController : UIViewController
         layer.frame = viewForLayer.bounds
         layer.contents = UIImage(named: "star")?.CGImage
         layer.contentsGravity = kCAGravityCenter
-        layer.backgroundColor = swiftOrangeColor.CGColor
+        layer.backgroundColor = swiftGreenColor.CGColor
         layer.cornerRadius = 100
         layer.borderWidth = 12
         layer.borderColor = UIColor.whiteColor().CGColor
@@ -34,5 +34,17 @@ class CALayerViewController : UIViewController
         layer.shadowRadius = 3.0
         layer.shadowOffset = CGSize(width: 0, height: 0)
         layer.magnificationFilter = kCAFilterLinear
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let identifier = segue.identifier
+            else { return }
+        
+        switch identifier {
+        case "DisplayLayerControls":
+            (segue.destinationViewController as? CALayerControlsViewController)?.layerViewController = self
+        default:
+            break
+        }
     }
 }

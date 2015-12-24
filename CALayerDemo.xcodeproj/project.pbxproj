@@ -14,6 +14,7 @@
 		643103311C2AC62B00AA1DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643103301C2AC62B00AA1DF5 /* Assets.xcassets */; };
 		643103341C2AC62B00AA1DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643103321C2AC62B00AA1DF5 /* LaunchScreen.storyboard */; };
 		64EC5E261C2AD55C000D94A7 /* MenuItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */; };
+		727CF2101C2BEF70005B2AC7 /* CALayerControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		643103331C2AC62B00AA1DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		643103351C2AC62B00AA1DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsViewController.swift; sourceTree = "<group>"; };
+		727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerControlsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				6431032B1C2AC62B00AA1DF5 /* SimpleLayerViewController.swift */,
 				64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */,
 				641105B91C2B908D0092253B /* CALayerViewController.swift */,
+				727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */,
 				6431032D1C2AC62B00AA1DF5 /* Main.storyboard */,
 				643103301C2AC62B00AA1DF5 /* Assets.xcassets */,
 				643103321C2AC62B00AA1DF5 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727CF2101C2BEF70005B2AC7 /* CALayerControlsViewController.swift in Sources */,
 				6431032C1C2AC62B00AA1DF5 /* SimpleLayerViewController.swift in Sources */,
 				64EC5E261C2AD55C000D94A7 /* MenuItemsViewController.swift in Sources */,
 				641105BA1C2B908D0092253B /* CALayerViewController.swift in Sources */,
@@ -256,6 +260,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CALayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.CALayerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -267,6 +272,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CALayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.CALayerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
