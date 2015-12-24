@@ -193,7 +193,10 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
     }
     
     @IBAction func shadowOffsetSliderChanged(sender: AnyObject) {
-        
+        let width = CGFloat(shadowOffsetSliders[0].value)
+        let height = CGFloat(shadowOffsetSliders[1].value)
+        layerViewController.layer.shadowOffset = CGSize(width: width, height: height)
+        shadowOffsetValueLabel.text = "Width : \(Int(width)), Height : \(Int(height))"
     }
 
     // MARK: - UITableViewDelegate
