@@ -1573,12 +1573,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgO-b8-zkW">
                                                         <rect key="frame" x="38" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="3jV-5B-nPC"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBG-Qr-EMY">
                                                         <rect key="frame" x="93" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="DIj-zx-nEu"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="q4f-6Y-KJm"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOY-7o-Fnh">
                                                         <rect key="frame" x="217" y="0.0" width="45" height="31"/>
@@ -1599,12 +1605,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="22" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNs-8P-NoK">
                                                         <rect key="frame" x="65" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="SCm-RZ-CqT"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JUG-iW-Ryq">
                                                         <rect key="frame" x="120" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="agV-E3-4eh"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="XBh-75-6Oa"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-PQ-5PH">
                                                         <rect key="frame" x="244" y="0.0" width="45" height="31"/>
@@ -1625,12 +1637,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="23" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azs-0n-Eln">
                                                         <rect key="frame" x="57" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="6c2-Ho-ttA"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5BP-71-Bzi">
                                                         <rect key="frame" x="112" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="n4d-CN-ByV"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="PSz-us-36i"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIp-2V-OJA">
                                                         <rect key="frame" x="236" y="0.0" width="45" height="31"/>
@@ -1651,12 +1669,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="24" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vz-aD-Gif">
                                                         <rect key="frame" x="55" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="ItV-Qo-KuT"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0KD-bm-3oC">
                                                         <rect key="frame" x="110" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="kn3-9G-cNy"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="wgK-4b-yS5"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZo-wD-DVq">
                                                         <rect key="frame" x="234" y="0.0" width="45" height="31"/>
@@ -1677,12 +1701,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="25" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-dR-ew5">
                                                         <rect key="frame" x="42" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="cF0-GQ-lTo"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fll-Pa-zsU">
                                                         <rect key="frame" x="97" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="k14-zV-2tD"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="AVM-B6-ebd"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR3-Io-IAW">
                                                         <rect key="frame" x="221" y="0.0" width="45" height="31"/>
@@ -1703,12 +1733,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="26" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haA-Zf-ebY">
                                                         <rect key="frame" x="56" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="7Os-Y4-EOg"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jiD-uO-z36">
                                                         <rect key="frame" x="111" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="rvf-ty-Pwt"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="8WR-al-Bsa"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd8-JC-47x">
                                                         <rect key="frame" x="235" y="0.0" width="45" height="31"/>
@@ -1729,12 +1765,18 @@
                                                     </label>
                                                     <switch opaque="NO" tag="27" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-a0-Tzk">
                                                         <rect key="frame" x="52" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="colorSwitchChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="fpc-Lh-gea"/>
+                                                        </connections>
                                                     </switch>
                                                     <slider opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DEx-S2-bXz">
                                                         <rect key="frame" x="107" y="0.0" width="118" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="114" id="W8N-7J-sVP"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="colorLocationSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="bDB-2a-2Ry"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="          " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pk-kA-dLf">
                                                         <rect key="frame" x="231" y="0.0" width="45" height="31"/>
