@@ -108,7 +108,6 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         contentsGravityPicker.alpha = 0.0
         
         UIView.animateWithDuration(0.25) {
-            [unowned self] in
             self.contentsGravityPicker.alpha = 1.0
         }
     }
@@ -121,11 +120,9 @@ class CALayerControlsViewController : UITableViewController, UIPickerViewDataSou
         relayoutTableViewCells()
         
         UIView.animateWithDuration(0.25, animations: {
-            [unowned self] in
             self.contentsGravityPicker.alpha = 0.0
         })
-        {
-            [unowned self] _ in
+        { _ in
             self.contentsGravityPicker.hidden = true
             self.tableView.userInteractionEnabled = true
         }

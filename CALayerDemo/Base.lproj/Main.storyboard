@@ -247,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="182" y="2052"/>
         </scene>
-        <!--Scroll Layer-->
+        <!--Scroll Layer View Controller-->
         <scene sceneID="Nv2-te-9pU">
             <objects>
-                <viewController id="Bi1-yU-r7l" customClass="CAScrollLayer" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bi1-yU-r7l" customClass="CAScrollLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8uy-4y-YoJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Y7D-rs-xmP"/>
@@ -262,8 +262,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gCG-Wm-8l0">
                                 <rect key="frame" x="175" y="136" width="250" height="328"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIA-Of-fPt" customClass="ScrollingView" customModule="CALayerDemo" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIA-Of-fPt" customClass="ScrollingView" customModule="CALayerDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cresentEarthRisesAboveLunarHorizon" translatesAutoresizingMaskIntoConstraints="NO" id="OSz-az-1TV">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -287,6 +293,9 @@
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-pH-bvw">
                                                         <rect key="frame" x="134" y="0.0" width="51" height="31"/>
                                                         <animations/>
+                                                        <connections>
+                                                            <action selector="scrollingSwitchChanged:" destination="Bi1-yU-r7l" eventType="valueChanged" id="1GC-ml-NPV"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                                 <animations/>
@@ -294,7 +303,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-d9-epf">
                                                 <rect key="frame" x="34" y="39" width="183" height="31"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal Scroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx8-Du-1zz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal Scroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx8-Du-1zz" userLabel="Vertical Scroll">
                                                         <rect key="frame" x="0.0" y="0.0" width="126" height="31"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -304,6 +313,9 @@
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19U-Y4-FSN">
                                                         <rect key="frame" x="134" y="0.0" width="51" height="31"/>
                                                         <animations/>
+                                                        <connections>
+                                                            <action selector="scrollingSwitchChanged:" destination="Bi1-yU-r7l" eventType="valueChanged" id="uCX-0x-fza"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                                 <animations/>
@@ -317,6 +329,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="gCG-Wm-8l0" firstAttribute="centerY" secondItem="DgQ-UZ-Ako" secondAttribute="centerY" id="4L2-eX-028"/>
                             <constraint firstItem="gCG-Wm-8l0" firstAttribute="centerX" secondItem="DgQ-UZ-Ako" secondAttribute="centerXWithinMargins" id="LFu-Cl-lbA"/>
@@ -331,10 +344,23 @@
                                 <exclude reference="cKx-jJ-LI1"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xRo-hp-xsa" appends="YES" id="XVt-ux-jPL"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gYh-0A-kxw"/>
+                    <connections>
+                        <outlet property="horizontalSwitch" destination="JgG-pH-bvw" id="XCC-Of-nOQ"/>
+                        <outlet property="scrollingView" destination="TIA-Of-fPt" id="F8p-r0-btZ"/>
+                        <outlet property="verticalSwitch" destination="19U-Y4-FSN" id="PFj-kl-iDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrZ-bs-xHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="xRo-hp-xsa">
+                    <connections>
+                        <action selector="panRecognized:" destination="Bi1-yU-r7l" id="UuL-lN-AdS"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="984" y="2800"/>
         </scene>
@@ -1275,5 +1301,6 @@
     </scenes>
     <resources>
         <image name="CALayer" width="40" height="40"/>
+        <image name="cresentEarthRisesAboveLunarHorizon" width="1280" height="1280"/>
     </resources>
 </document>
