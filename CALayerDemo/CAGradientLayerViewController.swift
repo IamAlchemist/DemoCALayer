@@ -20,4 +20,15 @@ class CAGradientLayerViewController : UIViewController {
     @IBOutlet var colorSliders: [UISlider]!
     @IBOutlet var colorLabels: [UILabel]!
     
+    let gradientLayer = CAGradientLayer()
+    
+    var colors = [AnyObject]()
+    
+    let locations : [Float] = [0, 1/6.0, 1/3.0, 0.5, 2/3.0, 5/6.0, 1.0]
+    
+    // MARK: -
+    
+    func sortOutletCollections() {
+    }
+    
 }
