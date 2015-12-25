@@ -1335,6 +1335,9 @@
                                                     <segment title="Helvetica"/>
                                                     <segment title="Noteworthy Light"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="fontChanged:" destination="YsY-Wo-hEI" eventType="valueChanged" id="iSk-Hr-vAJ"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <animations/>
@@ -1350,11 +1353,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-SG-orW">
-                                                <rect key="frame" x="56" y="0.0" width="351" height="32"/>
+                                                <rect key="frame" x="56" y="0.0" width="352" height="32"/>
                                                 <animations/>
+                                                <connections>
+                                                    <action selector="fontSizeChanged:" destination="YsY-Wo-hEI" eventType="valueChanged" id="kYZ-Da-kMM"/>
+                                                </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-Yr-ZDc">
-                                                <rect key="frame" x="421" y="0.0" width="42" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-Yr-ZDc">
+                                                <rect key="frame" x="422" y="0.0" width="41" height="31"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1363,6 +1369,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-SR-Srb">
                                                 <rect key="frame" x="479" y="0.0" width="51" height="31"/>
                                                 <animations/>
+                                                <connections>
+                                                    <action selector="wrapTextSwitchChanged:" destination="YsY-Wo-hEI" eventType="valueChanged" id="eLT-NH-dqM"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <animations/>
@@ -1370,15 +1379,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FqW-Om-p4u">
                                         <rect key="frame" x="0.0" y="440" width="528" height="28"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-iR-WEC">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alignment Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-iR-WEC">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="28"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GoM-W4-Hnn">
-                                                <rect key="frame" x="58" y="0.0" width="470" height="29"/>
+                                                <rect key="frame" x="142" y="0.0" width="386" height="29"/>
                                                 <animations/>
                                                 <segments>
                                                     <segment title="" image="align_left"/>
@@ -1386,6 +1395,9 @@
                                                     <segment title="" image="align_just"/>
                                                     <segment title="" image="align_right"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="aligmentModeChanged:" destination="YsY-Wo-hEI" eventType="valueChanged" id="7Rk-Yj-Dah"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <animations/>
@@ -1393,21 +1405,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-LH-Ea6">
                                         <rect key="frame" x="0.0" y="476" width="528" height="28"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-7k-k87">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Truncation Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-7k-k87">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="28"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-Y4-YoQ">
-                                                <rect key="frame" x="58" y="0.0" width="470" height="29"/>
+                                                <rect key="frame" x="146" y="0.0" width="382" height="29"/>
                                                 <animations/>
                                                 <segments>
                                                     <segment title="Start"/>
                                                     <segment title="Second"/>
                                                     <segment title="End"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="truncatModeChanged:" destination="YsY-Wo-hEI" eventType="valueChanged" id="QVW-L7-On2"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <animations/>
@@ -1426,6 +1441,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pEW-rm-kfX"/>
+                    <connections>
+                        <outlet property="alignmentModeSegmentedControl" destination="GoM-W4-Hnn" id="CKz-iV-Vy5"/>
+                        <outlet property="fontSizeSlider" destination="PdX-SG-orW" id="UVk-ex-k6R"/>
+                        <outlet property="fontSizeValueLabel" destination="5YI-nF-EWh" id="xXJ-pp-Etn"/>
+                        <outlet property="truncateModeSegementedControl" destination="Dic-Y4-YoQ" id="25A-Jk-CLL"/>
+                        <outlet property="viewForTextLayer" destination="g6c-gW-q01" id="nx5-vm-qpk"/>
+                        <outlet property="wrapTextSwitch" destination="dhl-SR-Srb" id="x4S-de-8so"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpx-cs-tBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
