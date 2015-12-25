@@ -112,6 +112,20 @@ class AVPlayerLayerViewController : UIViewController {
         updateRateSegmentedControl()
     }
     
+    func playerDidReachEndNotificationHandler(notification : NSNotification){
+        guard let playerItem = notification.object as? AVPlayerItem
+            else { return }
+        
+        playerItem.seekToTime(kCMTimeZero)
+        
+        if shouldLoop == false {
+            player.pause()
+            isPlaying = false
+            updatePlayButtonTitle()
+            updateRateSegmentedControl()
+        }
+        
+    }
     // MARK: -
     
     func updatePlayButtonTitle() {
