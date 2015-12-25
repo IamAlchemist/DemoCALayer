@@ -1474,10 +1474,10 @@
             </objects>
             <point key="canvasLocation" x="170" y="3600"/>
         </scene>
-        <!--View Controller-->
+        <!--Player Layer View Controller-->
         <scene sceneID="DJM-1A-wuv">
             <objects>
-                <viewController id="Ize-1K-XTP" sceneMemberID="viewController">
+                <viewController id="Ize-1K-XTP" customClass="AVPlayerLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ZO-g6-0f1"/>
                         <viewControllerLayoutGuide type="bottom" id="y9S-V4-ZrG"/>
@@ -1511,6 +1511,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
                                                 <animations/>
                                                 <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="playButtonTapped:" destination="Ize-1K-XTP" eventType="touchUpInside" id="sjR-vk-JJO"/>
+                                                </connections>
                                             </button>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-95-c1B">
                                                 <rect key="frame" x="124" y="0.0" width="176" height="31"/>
@@ -1520,6 +1523,9 @@
                                                     <segment title="Normal"/>
                                                     <segment title="2x"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="rateSegmentedControlChanged:" destination="Ize-1K-XTP" eventType="valueChanged" id="kQu-tJ-UEJ"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <animations/>
@@ -1537,6 +1543,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDt-bO-0qM">
                                                 <rect key="frame" x="66" y="0.0" width="51" height="31"/>
                                                 <animations/>
+                                                <connections>
+                                                    <action selector="loopSwitchChanged:" destination="Ize-1K-XTP" eventType="valueChanged" id="h80-l2-3YA"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OS-OB-boY">
                                                 <rect key="frame" x="123" y="0.0" width="58" height="31"/>
@@ -1548,6 +1557,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2Q-Ld-Ani">
                                                 <rect key="frame" x="187" y="0.0" width="115" height="32"/>
                                                 <animations/>
+                                                <connections>
+                                                    <action selector="volumeChanged:" destination="Ize-1K-XTP" eventType="valueChanged" id="eil-OF-HyP"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <animations/>
@@ -1567,6 +1579,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8bg-K8-qEt"/>
+                    <connections>
+                        <outlet property="loopSwitch" destination="LDt-bO-0qM" id="Dev-ID-HAg"/>
+                        <outlet property="playButton" destination="tuV-Hp-b2f" id="C0Q-f4-lFU"/>
+                        <outlet property="rateSegmentedControl" destination="GJd-95-c1B" id="1O2-OF-qiN"/>
+                        <outlet property="viewForPlayerLayer" destination="3aI-or-MfL" id="SAP-pL-nVT"/>
+                        <outlet property="volumnSlider" destination="Q2Q-Ld-Ani" id="07Q-un-Z99"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTl-7P-l0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
