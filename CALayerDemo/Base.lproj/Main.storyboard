@@ -1477,10 +1477,10 @@
             </objects>
             <point key="canvasLocation" x="170" y="4388"/>
         </scene>
-        <!--View Controller-->
+        <!--Gradient Layer View Controller-->
         <scene sceneID="ivZ-42-rdB">
             <objects>
-                <viewController id="eKi-fo-8Wz" sceneMemberID="viewController">
+                <viewController id="eKi-fo-8Wz" customClass="CAGradientLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JWE-QZ-bjL"/>
                         <viewControllerLayoutGuide type="bottom" id="M3h-Hx-xFu"/>
@@ -1750,6 +1750,34 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fd0-d2-nP9"/>
+                    <connections>
+                        <outlet property="endPointLabel" destination="sQe-XX-i46" id="jKK-BX-sZo"/>
+                        <outlet property="endPointSlider" destination="Dkh-gG-KF6" id="Ggc-S0-gXn"/>
+                        <outlet property="startPointLabel" destination="CY9-Ip-4PF" id="3IL-iv-XSu"/>
+                        <outlet property="startPointSlider" destination="7QF-Zc-TmW" id="KN4-9B-W5Z"/>
+                        <outlet property="viewForGradientLayer" destination="b3y-j2-PZh" id="GyT-qc-FEJ"/>
+                        <outletCollection property="colorSwitches" destination="fgO-b8-zkW" collectionClass="NSMutableArray" id="6b6-e1-Eyg"/>
+                        <outletCollection property="colorSwitches" destination="RNs-8P-NoK" collectionClass="NSMutableArray" id="asD-i1-ehP"/>
+                        <outletCollection property="colorSwitches" destination="azs-0n-Eln" collectionClass="NSMutableArray" id="CZO-7l-Y6r"/>
+                        <outletCollection property="colorSwitches" destination="1vz-aD-Gif" collectionClass="NSMutableArray" id="FeT-Jk-NWq"/>
+                        <outletCollection property="colorSwitches" destination="Vtm-dR-ew5" collectionClass="NSMutableArray" id="m5F-g0-1Gg"/>
+                        <outletCollection property="colorSwitches" destination="haA-Zf-ebY" collectionClass="NSMutableArray" id="Q3Q-m8-574"/>
+                        <outletCollection property="colorSwitches" destination="9cG-a0-Tzk" collectionClass="NSMutableArray" id="UNO-HS-rPw"/>
+                        <outletCollection property="colorSliders" destination="cBG-Qr-EMY" collectionClass="NSMutableArray" id="g82-rC-DQZ"/>
+                        <outletCollection property="colorSliders" destination="JUG-iW-Ryq" collectionClass="NSMutableArray" id="ukn-Dq-MoD"/>
+                        <outletCollection property="colorSliders" destination="5BP-71-Bzi" collectionClass="NSMutableArray" id="50P-lF-trl"/>
+                        <outletCollection property="colorSliders" destination="0KD-bm-3oC" collectionClass="NSMutableArray" id="UfY-Ur-Voi"/>
+                        <outletCollection property="colorSliders" destination="fll-Pa-zsU" collectionClass="NSMutableArray" id="6ka-0h-tGZ"/>
+                        <outletCollection property="colorSliders" destination="jiD-uO-z36" collectionClass="NSMutableArray" id="cDp-91-9kn"/>
+                        <outletCollection property="colorSliders" destination="DEx-S2-bXz" collectionClass="NSMutableArray" id="G1M-oB-OaJ"/>
+                        <outletCollection property="colorLabels" destination="hOY-7o-Fnh" collectionClass="NSMutableArray" id="ljP-by-PKn"/>
+                        <outletCollection property="colorLabels" destination="aA2-PQ-5PH" collectionClass="NSMutableArray" id="CpQ-xk-PbS"/>
+                        <outletCollection property="colorLabels" destination="FIp-2V-OJA" collectionClass="NSMutableArray" id="tMG-16-Urt"/>
+                        <outletCollection property="colorLabels" destination="uZo-wD-DVq" collectionClass="NSMutableArray" id="yDi-8P-p7E"/>
+                        <outletCollection property="colorLabels" destination="CR3-Io-IAW" collectionClass="NSMutableArray" id="7IH-u6-Ps0"/>
+                        <outletCollection property="colorLabels" destination="yd8-JC-47x" collectionClass="NSMutableArray" id="xN1-64-grg"/>
+                        <outletCollection property="colorLabels" destination="5pk-kA-dLf" collectionClass="NSMutableArray" id="xVR-Y9-qlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmj-5y-BcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
