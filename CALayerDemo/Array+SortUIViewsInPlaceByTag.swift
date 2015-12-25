@@ -6,4 +6,12 @@
 //  Copyright © 2015 Alchemist. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension Array where Element: UIView {
+    mutating func sortUIViewsInPlaceByTag() {
+        sortInPlace { (left, right) -> Bool in
+            left.tag < right.tag
+        }
+    }
+}
