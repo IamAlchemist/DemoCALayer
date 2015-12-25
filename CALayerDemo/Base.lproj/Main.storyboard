@@ -1514,6 +1514,9 @@
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7QF-Zc-TmW">
                                                         <rect key="frame" x="34" y="0.0" width="67" height="31"/>
+                                                        <connections>
+                                                            <action selector="pointSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="x5Y-h0-q5D"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0.5,1.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY9-Ip-4PF">
                                                         <rect key="frame" x="103" y="0.0" width="52" height="30"/>
@@ -1529,6 +1532,9 @@
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dkh-gG-KF6">
                                                         <rect key="frame" x="186" y="0.0" width="67" height="31"/>
+                                                        <connections>
+                                                            <action selector="pointSliderChanged:" destination="eKi-fo-8Wz" eventType="valueChanged" id="svm-Ag-1vr"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0.5,1.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQe-XX-i46">
                                                         <rect key="frame" x="255" y="0.0" width="39" height="30"/>
