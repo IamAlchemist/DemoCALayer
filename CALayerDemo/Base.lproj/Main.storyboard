@@ -2063,6 +2063,100 @@
             </objects>
             <point key="canvasLocation" x="162" y="5900"/>
         </scene>
+        <!--Tiled Layer View Controller-->
+        <scene sceneID="KLj-fC-LwJ">
+            <objects>
+                <viewController id="WtW-i5-6oI" customClass="CATiledLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FZv-dR-rAb"/>
+                        <viewControllerLayoutGuide type="bottom" id="CKj-wW-0tl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B4W-Nr-heq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="39W-4l-Ay6">
+                        <barButtonItem key="rightBarButtonItem" title="p" id="HXh-PT-Zwa">
+                            <connections>
+                                <segue destination="zzN-3Y-cOJ" kind="show" id="D98-87-wlF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frV-hY-PUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="6664"/>
+        </scene>
+        <!--Tiled Image Layer View Controlle-->
+        <scene sceneID="U8m-zj-p3q">
+            <objects>
+                <viewController id="zzN-3Y-cOJ" customClass="CATiledImageLayerViewControlle" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vU6-fg-SMa"/>
+                        <viewControllerLayoutGuide type="bottom" id="zG2-as-fba"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Uc-tf-Ydf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tX-0G-q0L">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xj-Sp-8FI">
+                                        <rect key="frame" x="20" y="20" width="5120" height="3200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="5120" id="49e-Ax-iez"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Xtb-UB-u8k"/>
+                                            <constraint firstAttribute="height" constant="3200" id="Z99-lE-pji"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Xtb-UB-u8k"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4xj-Sp-8FI" secondAttribute="trailing" constant="20" symbolic="YES" id="7XL-Zq-kJc"/>
+                                    <constraint firstAttribute="bottom" secondItem="4xj-Sp-8FI" secondAttribute="bottom" constant="20" symbolic="YES" id="KcT-g0-5PM"/>
+                                    <constraint firstItem="4xj-Sp-8FI" firstAttribute="top" secondItem="8tX-0G-q0L" secondAttribute="top" constant="20" symbolic="YES" id="QWW-e6-Hot"/>
+                                    <constraint firstItem="4xj-Sp-8FI" firstAttribute="leading" secondItem="8tX-0G-q0L" secondAttribute="leading" constant="20" symbolic="YES" id="R5o-FH-4fe"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8tX-0G-q0L" firstAttribute="leading" secondItem="3Uc-tf-Ydf" secondAttribute="leadingMargin" id="Axg-Qd-DcR"/>
+                            <constraint firstItem="8tX-0G-q0L" firstAttribute="top" secondItem="vU6-fg-SMa" secondAttribute="bottom" id="Lmy-Fa-hVt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8tX-0G-q0L" secondAttribute="trailing" id="bgM-U8-PkN"/>
+                            <constraint firstItem="zG2-as-fba" firstAttribute="top" secondItem="8tX-0G-q0L" secondAttribute="bottom" id="z5o-cc-C9v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ib-kL-SDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792" y="6664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WWa-he-jDv">
+            <objects>
+                <navigationController storyboardIdentifier="CATiledLayer" automaticallyAdjustsScrollViewInsets="NO" id="30J-Eh-BjI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KjC-Zn-sxK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WtW-i5-6oI" kind="relationship" relationship="rootViewController" id="482-hs-Y2h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cN-Oj-AVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="6664"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CALayer" width="40" height="40"/>
