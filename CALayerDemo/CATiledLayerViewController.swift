@@ -41,6 +41,8 @@ class CATiledLayerViewController : UIViewController, UIScrollViewDelegate {
         let sliderType = SliderTypes(rawValue: sliders.indexOf(sender)!)!
         let value = sender.value * scales[sliderType.rawValue]
         
+        updateLabel(sliderType)
+        
         switch sliderType {
         case .FadeDuration:
             TiledLayer.setFadeDuration(CFTimeInterval(value))
