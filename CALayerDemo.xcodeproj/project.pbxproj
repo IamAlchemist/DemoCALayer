@@ -15,7 +15,7 @@
 		643103341C2AC62B00AA1DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643103321C2AC62B00AA1DF5 /* LaunchScreen.storyboard */; };
 		64A9485A1C2D768900357285 /* CAGradientLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A948591C2D768900357285 /* CAGradientLayerViewController.swift */; };
 		64A9485C1C2D7AAC00357285 /* Array+SortUIViewsInPlaceByTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9485B1C2D7AAC00357285 /* Array+SortUIViewsInPlaceByTag.swift */; };
-		64A9485E1C2E34DF00357285 /* CARelicatorLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9485D1C2E34DF00357285 /* CARelicatorLayerViewController.swift */; };
+		64A9485E1C2E34DF00357285 /* CAReplicatorLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9485D1C2E34DF00357285 /* CAReplicatorLayerViewController.swift */; };
 		64EC5E261C2AD55C000D94A7 /* MenuItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */; };
 		727CF2101C2BEF70005B2AC7 /* CALayerControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */; };
 		727CF2121C2CDD55005B2AC7 /* CAScrollLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CF2111C2CDD55005B2AC7 /* CAScrollLayerViewController.swift */; };
@@ -37,7 +37,7 @@
 		643103351C2AC62B00AA1DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A948591C2D768900357285 /* CAGradientLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayerViewController.swift; sourceTree = "<group>"; };
 		64A9485B1C2D7AAC00357285 /* Array+SortUIViewsInPlaceByTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SortUIViewsInPlaceByTag.swift"; sourceTree = "<group>"; };
-		64A9485D1C2E34DF00357285 /* CARelicatorLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CARelicatorLayerViewController.swift; sourceTree = "<group>"; };
+		64A9485D1C2E34DF00357285 /* CAReplicatorLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayerViewController.swift; sourceTree = "<group>"; };
 		64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsViewController.swift; sourceTree = "<group>"; };
 		727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerControlsViewController.swift; sourceTree = "<group>"; };
 		727CF2111C2CDD55005B2AC7 /* CAScrollLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				727CF2171C2D61DC005B2AC7 /* AVPlayerLayerViewController.swift */,
 				64A948591C2D768900357285 /* CAGradientLayerViewController.swift */,
 				64A9485B1C2D7AAC00357285 /* Array+SortUIViewsInPlaceByTag.swift */,
-				64A9485D1C2E34DF00357285 /* CARelicatorLayerViewController.swift */,
+				64A9485D1C2E34DF00357285 /* CAReplicatorLayerViewController.swift */,
 				6431032D1C2AC62B00AA1DF5 /* Main.storyboard */,
 				643103301C2AC62B00AA1DF5 /* Assets.xcassets */,
 				643103321C2AC62B00AA1DF5 /* LaunchScreen.storyboard */,
@@ -177,7 +177,7 @@
 				727CF2181C2D61DC005B2AC7 /* AVPlayerLayerViewController.swift in Sources */,
 				64A9485C1C2D7AAC00357285 /* Array+SortUIViewsInPlaceByTag.swift in Sources */,
 				727CF2141C2CDE22005B2AC7 /* ScrollingView.swift in Sources */,
-				64A9485E1C2E34DF00357285 /* CARelicatorLayerViewController.swift in Sources */,
+				64A9485E1C2E34DF00357285 /* CAReplicatorLayerViewController.swift in Sources */,
 				6431032C1C2AC62B00AA1DF5 /* SimpleLayerViewController.swift in Sources */,
 				727CF2121C2CDD55005B2AC7 /* CAScrollLayerViewController.swift in Sources */,
 				64EC5E261C2AD55C000D94A7 /* MenuItemsViewController.swift in Sources */,

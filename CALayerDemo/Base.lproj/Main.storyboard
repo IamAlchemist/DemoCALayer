@@ -1849,10 +1849,10 @@
             </objects>
             <point key="canvasLocation" x="168" y="5136"/>
         </scene>
-        <!--Relicator Layer View Controller-->
+        <!--Replicator Layer View Controller-->
         <scene sceneID="9il-SX-1jm">
             <objects>
-                <viewController id="sSA-4H-F61" customClass="CARelicatorLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sSA-4H-F61" customClass="CAReplicatorLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YEQ-WA-4Md"/>
                         <viewControllerLayoutGuide type="bottom" id="a02-t6-xLW"/>
@@ -1861,10 +1861,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-Ak-obY">
-                                <rect key="frame" x="175" y="79" width="296" height="442"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-Ak-obY">
+                                <rect key="frame" x="152" y="79" width="296" height="442"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11t-8a-OvY">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11t-8a-OvY">
                                         <rect key="frame" x="23" y="0.0" width="250" height="250"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1872,7 +1872,7 @@
                                             <constraint firstAttribute="width" constant="250" id="XBn-Lf-j7t"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4wN-XG-DMu">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4wN-XG-DMu">
                                         <rect key="frame" x="28" y="258" width="241" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LayerSize" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avh-8M-OHi">
@@ -1901,7 +1901,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="syB-uP-dzs">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="syB-uP-dzs">
                                         <rect key="frame" x="7" y="296" width="283" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instance Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ0-Qj-o9n">
@@ -1930,7 +1930,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-v2-tfw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-v2-tfw">
                                         <rect key="frame" x="9" y="334" width="279" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instance Delay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49L-HI-EcX">
@@ -1959,7 +1959,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdr-ua-M6k">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdr-ua-M6k">
                                         <rect key="frame" x="13" y="372" width="270" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z4-iE-ZNt">
@@ -1988,7 +1988,7 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-Pf-eGo">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-Pf-eGo">
                                         <rect key="frame" x="0.0" y="411" width="296" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceS-7E-nG4">
@@ -2003,13 +2003,13 @@
                                                     <action selector="offsetSwitchChanged:" destination="sSA-4H-F61" eventType="valueChanged" id="tq7-cV-v3a"/>
                                                 </connections>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fade Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOT-9E-SEn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOT-9E-SEn">
                                                 <rect key="frame" x="153" y="0.0" width="86" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-VS-XJM">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-VS-XJM">
                                                 <rect key="frame" x="247" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="offsetSwitchChanged:" destination="sSA-4H-F61" eventType="valueChanged" id="nn2-6p-jqK"/>
@@ -2035,6 +2035,10 @@
                         <outlet property="layerSizeLabel" destination="xmS-ZA-7vJ" id="0dr-Pd-IZl"/>
                         <outlet property="layerSizeSlider" destination="Bdn-hM-j3w" id="qwe-11-7Q8"/>
                         <outlet property="viewForReplicatorLayer" destination="11t-8a-OvY" id="nnh-Aq-R4Y"/>
+                        <outletCollection property="offsetSwitches" destination="YEu-Qu-vQ3" collectionClass="NSMutableArray" id="vgN-s0-M0C"/>
+                        <outletCollection property="offsetSwitches" destination="FyN-aa-3N8" collectionClass="NSMutableArray" id="SNO-sH-DZF"/>
+                        <outletCollection property="offsetSwitches" destination="ACR-no-9Nj" collectionClass="NSMutableArray" id="0eu-QM-egE"/>
+                        <outletCollection property="offsetSwitches" destination="pgb-VS-XJM" collectionClass="NSMutableArray" id="bZd-Jx-pFu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMg-dQ-CEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2044,7 +2048,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YZy-Sk-MSx">
             <objects>
-                <navigationController storyboardIdentifier="CARelicator" automaticallyAdjustsScrollViewInsets="NO" id="CyY-me-O8r" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CAReplicatorLayer" automaticallyAdjustsScrollViewInsets="NO" id="CyY-me-O8r" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OUI-dU-4vL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CARelicatorLayerViewController : UIViewController {
+class CAReplicatorLayerViewController : UIViewController {
     
     @IBOutlet weak var viewForReplicatorLayer: UIView!
     @IBOutlet weak var layerSizeSlider: UISlider!
@@ -17,6 +17,15 @@ class CARelicatorLayerViewController : UIViewController {
     @IBOutlet weak var instanceCountLabel: UILabel!
     @IBOutlet weak var instanceDelaySlider: UISlider!
     @IBOutlet weak var instanceDelayLabel: UILabel!
+    @IBOutlet var offsetSwitches: [UISwitch]!
+    
+    enum OffsetType : Int {
+        case Red, Green, Blue, Alpha
+    }
+    
+    
+    // MARK: -
+    
     
     // MARK: -
     @IBAction func instanceSizeChanged(sender: UISlider) {
@@ -29,5 +38,9 @@ class CARelicatorLayerViewController : UIViewController {
     }
     
     @IBAction func offsetSwitchChanged(sender: UISwitch) {
+        let offsetType = OffsetType(rawValue: offsetSwitches.indexOf(sender)!)
+//        switch OffsetType {
+//            case .Red:
+//        }
     }
 }
