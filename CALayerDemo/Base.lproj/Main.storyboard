@@ -2272,6 +2272,7 @@
                     <connections>
                         <outlet property="scrollView" destination="Bh5-ZH-KOf" id="jxF-cf-lQN"/>
                         <outlet property="tileLabel" destination="t1R-7j-5oE" id="7Nr-wb-bPz"/>
+                        <outlet property="viewForTiledLayer" destination="040-k8-IiS" id="uui-PO-25b"/>
                         <outletCollection property="sliders" destination="KV9-Bq-2Iq" collectionClass="NSMutableArray" id="4DT-Px-9Dx"/>
                         <outletCollection property="sliders" destination="1Ho-gY-xXY" collectionClass="NSMutableArray" id="3kB-i9-X3j"/>
                         <outletCollection property="sliders" destination="i9L-Us-eW1" collectionClass="NSMutableArray" id="fOK-6D-Lp6"/>
