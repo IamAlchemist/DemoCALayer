@@ -25,6 +25,7 @@ class TilingView : UIView {
     }
     
     override func drawRect(rect: CGRect) {
+        NSLog("w: %f, h: %f", rect.size.width, rect.size.height)
         let context = UIGraphicsGetCurrentContext()
         let scale = UIScreen.mainScreen().scale
         

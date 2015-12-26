@@ -2084,18 +2084,18 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bh5-ZH-KOf">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="50" translatesAutoresizingMaskIntoConstraints="NO" id="Bh5-ZH-KOf">
                                         <rect key="frame" x="16" y="29" width="250" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="040-k8-IiS" customClass="TilingView" customModule="CALayerDemo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="CgC-3B-71h"/>
                                                     <constraint firstAttribute="height" constant="250" id="Jb7-hK-C11"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="040-k8-IiS" secondAttribute="trailing" id="42E-ug-yAt"/>
                                             <constraint firstItem="040-k8-IiS" firstAttribute="leading" secondItem="Bh5-ZH-KOf" secondAttribute="leading" id="7St-Mh-sIJ"/>
@@ -2270,7 +2270,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="scrollView" destination="Bh5-ZH-KOf" id="jxF-cf-lQN"/>
+                        <outlet property="scrollView" destination="Bh5-ZH-KOf" id="A7a-ol-gl2"/>
                         <outlet property="tileLabel" destination="t1R-7j-5oE" id="7Nr-wb-bPz"/>
                         <outlet property="viewForTiledLayer" destination="040-k8-IiS" id="uui-PO-25b"/>
                         <outletCollection property="sliders" destination="KV9-Bq-2Iq" collectionClass="NSMutableArray" id="4DT-Px-9Dx"/>

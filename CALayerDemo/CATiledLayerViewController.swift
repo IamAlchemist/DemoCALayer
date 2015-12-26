@@ -55,11 +55,13 @@ class CATiledLayerViewController : UIViewController, UIScrollViewDelegate {
             
         case .LevelsOfDetail:
             tiledLayer.levelsOfDetail = Int(value)
+            NSLog("levelOfDetail : %d, zoomScale : %f", tiledLayer.levelsOfDetail, scrollView.zoomScale)
 
         case .DetailBias:
             tiledLayer.levelsOfDetailBias = Int(value)
             
         case .ZoomScale:
+            NSLog("sender : %f, %f, %f", sender.value, scales[sliderType.rawValue], value)
             scrollView.zoomScale = CGFloat(value)
         }
     }
@@ -83,6 +85,7 @@ class CATiledLayerViewController : UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidZoom(scrollView: UIScrollView) {
         sliders[SliderTypes.ZoomScale.rawValue].setValue(Float(scrollView.zoomScale), animated: true)
+        NSLog("zoomScale : %f", scrollView.zoomScale)
     }
     
 }
