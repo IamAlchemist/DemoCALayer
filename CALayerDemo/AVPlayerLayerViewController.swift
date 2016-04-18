@@ -49,7 +49,7 @@ class AVPlayerLayerViewController : UIViewController {
         
         viewForPlayerLayer.layer.addSublayer(playerLayer)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerDidReachEndNotificationHandler:", name: "AVPlayerItemDidPlayToEndTimeNotification", object: player.currentItem)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AVPlayerLayerViewController.playerDidReachEndNotificationHandler(_:)), name: "AVPlayerItemDidPlayToEndTimeNotification", object: player.currentItem)
     }
     
     deinit {
