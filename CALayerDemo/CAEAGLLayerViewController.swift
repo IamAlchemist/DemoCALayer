@@ -16,6 +16,8 @@ class CAEAGLLayerViewController : UIViewController {
     var frameBufferHeight : GLint = 0
     var effect = GLKBaseEffect()
     var glContext = EAGLContext(API: .OpenGLES2)
+    var glLayer = CAEAGLLayer()
+    
     
     func setupBuffers() {
         glGenFramebuffers(1, &frameBuffer)
@@ -24,6 +26,7 @@ class CAEAGLLayerViewController : UIViewController {
         glGenRenderbuffers(1, &colorRenderbuffer)
         glBindRenderbuffer(GLenum(GL_RENDERBUFFER), colorRenderbuffer)
         glFramebufferRenderbuffer(GLenum(GL_FRAMEBUFFER), GLenum(GL_COLOR_ATTACHMENT0), GLenum(GL_RENDERBUFFER), colorRenderbuffer)
+        glContext.renderbufferStorage(Int(GL_RENDERBUFFER), fromDrawable: glLayer)
         glGetRenderbufferParameteriv(GLenum(GL_RENDERBUFFER), GLenum(GL_RENDERBUFFER_WIDTH), &frameBufferWidth)
         glGetRenderbufferParameteriv(GLenum(GL_RENDERBUFFER), GLenum(GL_RENDERBUFFER_HEIGHT), &frameBufferHeight)
         
@@ -81,7 +84,6 @@ class CAEAGLLayerViewController : UIViewController {
         
         EAGLContext.setCurrentContext(glContext)
         
-        let glLayer = CAEAGLLayer()
         glLayer.frame = view.bounds
         view.layer.addSublayer(glLayer)
         glLayer.drawableProperties = [kEAGLDrawablePropertyRetainedBacking: false, kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8]
