@@ -139,10 +139,17 @@ class CATextLayerViewController : UIViewController {
         
         textLayer.frame = viewForTextLayer.bounds
         
-        var string = ""
-        for _ in 1...20 {
-            string += "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor arcu quis velit congue dictum. "
-        }
+        let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque massa arcu, eleifend vel varius in, facilisis pulvinar leo. Nunc quis nunc at mauris pharetra condimentum ut ac neque. Nunc elementum, libero ut porttitor dictum, diam odio congue lacus, vel fringilla sapien diam at purus. Etiam suscipit pretium nunc sit amet lobortis";
+        
+        let string = NSMutableAttributedString(string: text)
+        let attrib = [NSForegroundColorAttributeName: UIColor.blackColor(),
+                      NSFontAttributeName : UIFont.systemFontOfSize(15)]
+        string.setAttributes(attrib, range: NSRange(location: 0, length: text.characters.count))
+        
+        let attrib2 = [NSForegroundColorAttributeName: UIColor.redColor(),
+                       NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue,
+                       NSFontAttributeName: UIFont.systemFontOfSize(20)]
+        string.setAttributes(attrib2, range: NSRange(location: 6, length: 5))
         
         textLayer.string = string
         textLayer.font = helveticaFont
