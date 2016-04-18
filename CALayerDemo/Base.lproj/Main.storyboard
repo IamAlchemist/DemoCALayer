@@ -162,7 +162,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="CATransformLayer" storyboardName="TransformLayer" id="3Yy-pX-7ri" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dS-xj-xjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1.5" y="1869"/>
+            <point key="canvasLocation" x="-7" y="1867"/>
+        </scene>
+        <!--EmitterLayer-->
+        <scene sceneID="ETb-lb-A4w">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CAEmitterLayer" storyboardName="EmitterLayer" id="SNL-sS-OqA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKY-Ni-3Me" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="1956"/>
         </scene>
     </scenes>
     <resources>
