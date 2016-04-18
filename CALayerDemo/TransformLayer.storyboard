@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Transform Layer View Controller-->
         <scene sceneID="Lxs-Jz-CDO">
             <objects>
-                <viewController id="bnq-7I-rg5" sceneMemberID="viewController">
+                <viewController id="bnq-7I-rg5" customClass="CATransformLayerViewController" customModule="CALayerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yyY-FX-YKE"/>
                         <viewControllerLayoutGuide type="bottom" id="reF-Bc-xHQ"/>
