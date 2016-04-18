@@ -22,6 +22,7 @@
 		64A948661C2EBC7D00357285 /* TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A948651C2EBC7D00357285 /* TiledLayer.swift */; };
 		64EC5E261C2AD55C000D94A7 /* MenuItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */; };
 		7214EC9A1CC491DE000B8F1B /* ShapeLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7214EC991CC491DE000B8F1B /* ShapeLayer.storyboard */; };
+		7214EC9C1CC4AFA7000B8F1B /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7214EC9B1CC4AFA7000B8F1B /* CAShapeLayerViewController.swift */; };
 		727CF2101C2BEF70005B2AC7 /* CALayerControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */; };
 		727CF2121C2CDD55005B2AC7 /* CAScrollLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CF2111C2CDD55005B2AC7 /* CAScrollLayerViewController.swift */; };
 		727CF2141C2CDE22005B2AC7 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727CF2131C2CDE22005B2AC7 /* ScrollingView.swift */; };
@@ -57,6 +58,7 @@
 		64A948651C2EBC7D00357285 /* TiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledLayer.swift; sourceTree = "<group>"; };
 		64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemsViewController.swift; sourceTree = "<group>"; };
 		7214EC991CC491DE000B8F1B /* ShapeLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShapeLayer.storyboard; sourceTree = "<group>"; };
+		7214EC9B1CC4AFA7000B8F1B /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
 		727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerControlsViewController.swift; sourceTree = "<group>"; };
 		727CF2111C2CDD55005B2AC7 /* CAScrollLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerViewController.swift; sourceTree = "<group>"; };
 		727CF2131C2CDE22005B2AC7 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				64A9485F1C2E915F00357285 /* CATiledLayerViewController.swift */,
 				64A9485D1C2E34DF00357285 /* CAReplicatorLayerViewController.swift */,
 				64A948611C2E930D00357285 /* CATiledImageLayerViewController.swift */,
+				7214EC9B1CC4AFA7000B8F1B /* CAShapeLayerViewController.swift */,
 				64A948631C2EBBD300357285 /* TilingView.swift */,
 				64A948651C2EBC7D00357285 /* TiledLayer.swift */,
 				6431032D1C2AC62B00AA1DF5 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				641105BA1C2B908D0092253B /* CALayerViewController.swift in Sources */,
 				6431032A1C2AC62B00AA1DF5 /* AppDelegate.swift in Sources */,
 				64A9485A1C2D768900357285 /* CAGradientLayerViewController.swift in Sources */,
+				7214EC9C1CC4AFA7000B8F1B /* CAShapeLayerViewController.swift in Sources */,
 				727CF2161C2CEAA1005B2AC7 /* CATextLayerViewController.swift in Sources */,
 				64A948621C2E930D00357285 /* CATiledImageLayerViewController.swift in Sources */,
 			);
