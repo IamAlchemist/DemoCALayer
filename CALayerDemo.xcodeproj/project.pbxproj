@@ -13,6 +13,8 @@
 		6431032F1C2AC62B00AA1DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6431032D1C2AC62B00AA1DF5 /* Main.storyboard */; };
 		643103311C2AC62B00AA1DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 643103301C2AC62B00AA1DF5 /* Assets.xcassets */; };
 		643103341C2AC62B00AA1DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643103321C2AC62B00AA1DF5 /* LaunchScreen.storyboard */; };
+		645BCF8B1CC4D047007B5297 /* EAGLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645BCF8A1CC4D047007B5297 /* EAGLayer.storyboard */; };
+		645BCF8D1CC4D10A007B5297 /* CAEAGLLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645BCF8C1CC4D10A007B5297 /* CAEAGLLayerViewController.swift */; };
 		64A69C7C1CC4CCAF0073CDD4 /* EmitterLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A69C7B1CC4CCAF0073CDD4 /* EmitterLayer.storyboard */; };
 		64A69C7E1CC4CD3B0073CDD4 /* CAEmitterLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A69C7D1CC4CD3B0073CDD4 /* CAEmitterLayerViewController.swift */; };
 		64A9485A1C2D768900357285 /* CAGradientLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A948591C2D768900357285 /* CAGradientLayerViewController.swift */; };
@@ -53,6 +55,8 @@
 		643103301C2AC62B00AA1DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		643103331C2AC62B00AA1DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		643103351C2AC62B00AA1DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645BCF8A1CC4D047007B5297 /* EAGLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EAGLayer.storyboard; sourceTree = "<group>"; };
+		645BCF8C1CC4D10A007B5297 /* CAEAGLLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAEAGLLayerViewController.swift; sourceTree = "<group>"; };
 		64A69C7B1CC4CCAF0073CDD4 /* EmitterLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmitterLayer.storyboard; sourceTree = "<group>"; };
 		64A69C7D1CC4CD3B0073CDD4 /* CAEmitterLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAEmitterLayerViewController.swift; sourceTree = "<group>"; };
 		64A948591C2D768900357285 /* CAGradientLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAGradientLayerViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				723C4AA01CC4B5C50037B996 /* CATransformLayerViewController.swift */,
 				6431032B1C2AC62B00AA1DF5 /* SimpleLayerViewController.swift */,
 				64EC5E251C2AD55C000D94A7 /* MenuItemsViewController.swift */,
+				645BCF8C1CC4D10A007B5297 /* CAEAGLLayerViewController.swift */,
 				641105B91C2B908D0092253B /* CALayerViewController.swift */,
 				727CF20F1C2BEF70005B2AC7 /* CALayerControlsViewController.swift */,
 				727CF2111C2CDD55005B2AC7 /* CAScrollLayerViewController.swift */,
@@ -137,6 +142,7 @@
 				64A948651C2EBC7D00357285 /* TiledLayer.swift */,
 				6431032D1C2AC62B00AA1DF5 /* Main.storyboard */,
 				64A69C7B1CC4CCAF0073CDD4 /* EmitterLayer.storyboard */,
+				645BCF8A1CC4D047007B5297 /* EAGLayer.storyboard */,
 				723C4A9E1CC4B50A0037B996 /* TransformLayer.storyboard */,
 				7214EC991CC491DE000B8F1B /* ShapeLayer.storyboard */,
 				72DDAE741C3A47C100D848BE /* TiledLayer.storyboard */,
@@ -220,6 +226,7 @@
 				64A69C7C1CC4CCAF0073CDD4 /* EmitterLayer.storyboard in Resources */,
 				643103311C2AC62B00AA1DF5 /* Assets.xcassets in Resources */,
 				7214EC9A1CC491DE000B8F1B /* ShapeLayer.storyboard in Resources */,
+				645BCF8B1CC4D047007B5297 /* EAGLayer.storyboard in Resources */,
 				72DDAE671C3A462E00D848BE /* LayerView.storyboard in Resources */,
 				6431032F1C2AC62B00AA1DF5 /* Main.storyboard in Resources */,
 				72DDAE6E1C3A475F00D848BE /* PlayerLayer.storyboard in Resources */,
@@ -249,6 +256,7 @@
 				64A948601C2E915F00357285 /* CATiledLayerViewController.swift in Sources */,
 				727CF2121C2CDD55005B2AC7 /* CAScrollLayerViewController.swift in Sources */,
 				64EC5E261C2AD55C000D94A7 /* MenuItemsViewController.swift in Sources */,
+				645BCF8D1CC4D10A007B5297 /* CAEAGLLayerViewController.swift in Sources */,
 				64A948661C2EBC7D00357285 /* TiledLayer.swift in Sources */,
 				641105BA1C2B908D0092253B /* CALayerViewController.swift in Sources */,
 				6431032A1C2AC62B00AA1DF5 /* AppDelegate.swift in Sources */,

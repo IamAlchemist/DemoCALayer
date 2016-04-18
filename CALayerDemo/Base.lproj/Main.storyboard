@@ -172,6 +172,14 @@
             </objects>
             <point key="canvasLocation" x="-16" y="1956"/>
         </scene>
+        <!--EAGLayer-->
+        <scene sceneID="AO8-ZN-eTj">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CAEAGLLayer" storyboardName="EAGLayer" id="zvo-LF-nLI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2b-cP-MW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.5" y="2032"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CALayer" width="40" height="40"/>
