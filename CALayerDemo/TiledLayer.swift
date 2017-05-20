@@ -16,7 +16,7 @@ class TiledLayer : CATiledLayer {
         return TiledLayer.adustableFadeDuration
     }
     
-    class func setFadeDuration(duration : CFTimeInterval){
+    class func setFadeDuration(_ duration : CFTimeInterval){
         TiledLayer.adustableFadeDuration = duration
     }
 }

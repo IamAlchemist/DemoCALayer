@@ -10,7 +10,7 @@ import UIKit
 
 extension Array where Element: UIView {
     mutating func sortUIViewsInPlaceByTag() {
-        sortInPlace { (left, right) -> Bool in
+        sort { (left, right) -> Bool in
             left.tag < right.tag
         }
     }

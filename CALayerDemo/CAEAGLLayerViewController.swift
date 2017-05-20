@@ -15,7 +15,7 @@ class CAEAGLLayerViewController : UIViewController {
     var frameBufferWidth : GLint = 0
     var frameBufferHeight : GLint = 0
     var effect = GLKBaseEffect()
-    var glContext = EAGLContext(API: .OpenGLES2)
+    var glContext = EAGLContext(api: .openGLES2)
     var glLayer = CAEAGLLayer()
     
     
@@ -26,7 +26,7 @@ class CAEAGLLayerViewController : UIViewController {
         glGenRenderbuffers(1, &colorRenderbuffer)
         glBindRenderbuffer(GLenum(GL_RENDERBUFFER), colorRenderbuffer)
         glFramebufferRenderbuffer(GLenum(GL_FRAMEBUFFER), GLenum(GL_COLOR_ATTACHMENT0), GLenum(GL_RENDERBUFFER), colorRenderbuffer)
-        glContext.renderbufferStorage(Int(GL_RENDERBUFFER), fromDrawable: glLayer)
+        glContext?.renderbufferStorage(Int(GL_RENDERBUFFER), from: glLayer)
         glGetRenderbufferParameteriv(GLenum(GL_RENDERBUFFER), GLenum(GL_RENDERBUFFER_WIDTH), &frameBufferWidth)
         glGetRenderbufferParameteriv(GLenum(GL_RENDERBUFFER), GLenum(GL_RENDERBUFFER_HEIGHT), &frameBufferHeight)
         
@@ -68,21 +68,21 @@ class CAEAGLLayerViewController : UIViewController {
         ]
         
         //draw triangle
-        glEnableVertexAttribArray(GLuint(GLKVertexAttrib.Position.rawValue))
-        glEnableVertexAttribArray(GLuint(GLKVertexAttrib.Color.rawValue))
-        glVertexAttribPointer(GLuint(GLKVertexAttrib.Position.rawValue), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, vertices)
-        glVertexAttribPointer(GLuint(GLKVertexAttrib.Color.rawValue),4, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, colors)
+        glEnableVertexAttribArray(GLuint(GLKVertexAttrib.position.rawValue))
+        glEnableVertexAttribArray(GLuint(GLKVertexAttrib.color.rawValue))
+        glVertexAttribPointer(GLuint(GLKVertexAttrib.position.rawValue), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, vertices)
+        glVertexAttribPointer(GLuint(GLKVertexAttrib.color.rawValue),4, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, colors)
         glDrawArrays(GLenum(GL_TRIANGLES), 0, 3)
 
         //present render buffer
         glBindRenderbuffer(GLenum(GL_RENDERBUFFER), colorRenderbuffer);
-        glContext.presentRenderbuffer(Int(GL_RENDERBUFFER))
+        glContext?.presentRenderbuffer(Int(GL_RENDERBUFFER))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EAGLContext.setCurrentContext(glContext)
+        EAGLContext.setCurrent(glContext)
         
         glLayer.frame = view.bounds
         view.layer.addSublayer(glLayer)
@@ -96,7 +96,7 @@ class CAEAGLLayerViewController : UIViewController {
     
     deinit {
         tearDownBuffers()
-        EAGLContext.setCurrentContext(nil)
+        EAGLContext.setCurrent(nil)
     }
     
     

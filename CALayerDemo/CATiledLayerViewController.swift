@@ -21,7 +21,7 @@ class CATiledLayerViewController : UIViewController, UIScrollViewDelegate {
     @IBOutlet var labels: [UILabel]!
     
     enum SliderTypes : Int {
-        case FadeDuration, TileSize, LevelsOfDetail, DetailBias, ZoomScale
+        case fadeDuration, tileSize, levelsOfDetail, detailBias, zoomScale
     }
     
     let scales : [Float] = [20, 200, 5, 4, 20]
@@ -32,35 +32,35 @@ class CATiledLayerViewController : UIViewController, UIScrollViewDelegate {
     
     // MARK: -
     
-    func updateLabel( sliderType : SliderTypes) {
+    func updateLabel( _ sliderType : SliderTypes) {
         labels[sliderType.rawValue].text = String(format: "%.1f", sliders[sliderType.rawValue].value * scales[sliderType.rawValue])
     }
     
     // MARK: - IBActions
-    @IBAction func sliderChanged(sender: UISlider) {
-        let sliderType = SliderTypes(rawValue: sliders.indexOf(sender)!)!
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        let sliderType = SliderTypes(rawValue: sliders.index(of: sender)!)!
         let value = sender.value * scales[sliderType.rawValue]
         
         updateLabel(sliderType)
         
         switch sliderType {
-        case .FadeDuration:
+        case .fadeDuration:
             TiledLayer.setFadeDuration(CFTimeInterval(value))
             tiledLayer.contents = nil
-            tiledLayer.setNeedsDisplayInRect(tiledLayer.bounds)
+            tiledLayer.setNeedsDisplayIn(tiledLayer.bounds)
             
-        case .TileSize:
+        case .tileSize:
             let value = Int(value)
             tiledLayer.tileSize = CGSize(width: value, height: value)
             
-        case .LevelsOfDetail:
+        case .levelsOfDetail:
             tiledLayer.levelsOfDetail = Int(value)
             NSLog("levelOfDetail : %d, zoomScale : %f", tiledLayer.levelsOfDetail, scrollView.zoomScale)
 
-        case .DetailBias:
+        case .detailBias:
             tiledLayer.levelsOfDetailBias = Int(value)
             
-        case .ZoomScale:
+        case .zoomScale:
             NSLog("sender : %f, %f, %f", sender.value, scales[sliderType.rawValue], value)
             scrollView.zoomScale = CGFloat(value)
         }
@@ -79,12 +79,12 @@ class CATiledLayerViewController : UIViewController, UIScrollViewDelegate {
     
     // MARK: - UIScrollViewDelegate
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return viewForTiledLayer
     }
     
-    func scrollViewDidZoom(scrollView: UIScrollView) {
-        sliders[SliderTypes.ZoomScale.rawValue].setValue(Float(scrollView.zoomScale), animated: true)
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        sliders[SliderTypes.zoomScale.rawValue].setValue(Float(scrollView.zoomScale), animated: true)
         NSLog("zoomScale : %f", scrollView.zoomScale)
     }
     

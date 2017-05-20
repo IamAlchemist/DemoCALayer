@@ -13,7 +13,7 @@ class CALayerViewController : UIViewController
     @IBOutlet weak var viewForLayer: UIView!
     
     let layer = CALayer()
-    let star = UIImage(named: "star")?.CGImage
+    let star = UIImage(named: "star")?.cgImage
     
     override func viewDidLoad()
     {
@@ -27,23 +27,23 @@ class CALayerViewController : UIViewController
         layer.frame = viewForLayer.bounds
         layer.contents = star
         layer.contentsGravity = kCAGravityCenter
-        layer.backgroundColor = swiftGreenColor.CGColor
+        layer.backgroundColor = swiftGreenColor.cgColor
         layer.cornerRadius = 100
         layer.borderWidth = 12
-        layer.borderColor = UIColor.whiteColor().CGColor
+        layer.borderColor = UIColor.white.cgColor
         layer.shadowOpacity = 0.75
         layer.shadowRadius = 3.0
         layer.shadowOffset = CGSize(width: 0, height: 0)
         layer.magnificationFilter = kCAFilterLinear
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier
             else { return }
         
         switch identifier {
         case "DisplayLayerControls":
-            (segue.destinationViewController as? CALayerControlsViewController)?.layerViewController = self
+            (segue.destination as? CALayerControlsViewController)?.layerViewController = self
         default:
             break
         }

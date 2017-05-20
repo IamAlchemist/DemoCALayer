@@ -18,7 +18,7 @@ class AVPlayerLayerViewController : UIViewController {
     @IBOutlet weak var volumnSlider: UISlider!
     
     enum Rate : Int {
-        case SlowForward, Normal, FastForward
+        case slowForward, normal, fastForward
     }
     
     let playerLayer = AVPlayerLayer()
@@ -34,9 +34,9 @@ class AVPlayerLayerViewController : UIViewController {
     
     func setupPlayerLayer(){
         playerLayer.frame = viewForPlayerLayer.frame
-        let url = NSBundle.mainBundle().URLForResource("colorfulStreak", withExtension: "m4v")!
-        let player = AVPlayer(URL: url)
-        player.actionAtItemEnd = .None
+        let url = Bundle.main.url(forResource: "colorfulStreak", withExtension: "m4v")!
+        let player = AVPlayer(url: url)
+        player.actionAtItemEnd = .none
         playerLayer.player = player
     }
     
@@ -49,31 +49,31 @@ class AVPlayerLayerViewController : UIViewController {
         
         viewForPlayerLayer.layer.addSublayer(playerLayer)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AVPlayerLayerViewController.playerDidReachEndNotificationHandler(_:)), name: "AVPlayerItemDidPlayToEndTimeNotification", object: player.currentItem)
+        NotificationCenter.default.addObserver(self, selector: #selector(AVPlayerLayerViewController.playerDidReachEndNotificationHandler(_:)), name: NSNotification.Name(rawValue: "AVPlayerItemDidPlayToEndTimeNotification"), object: player.currentItem)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: -
     
-    @IBAction func loopSwitchChanged(sender: UISwitch) {
-        shouldLoop = sender.on
-        player.actionAtItemEnd = shouldLoop ? .None : .Pause;
+    @IBAction func loopSwitchChanged(_ sender: UISwitch) {
+        shouldLoop = sender.isOn
+        player.actionAtItemEnd = shouldLoop ? .none : .pause;
     }
     
-    @IBAction func playButtonTapped(sender: UIButton) {
+    @IBAction func playButtonTapped(_ sender: UIButton) {
         play()
     }
     
-    @IBAction func rateSegmentedControlChanged(sender: UISegmentedControl) {
+    @IBAction func rateSegmentedControlChanged(_ sender: UISegmentedControl) {
         var rate : Float!
         
         switch sender.selectedSegmentIndex {
-        case Rate.SlowForward.rawValue:
+        case Rate.slowForward.rawValue:
             rate = 0.5
-        case Rate.FastForward.rawValue:
+        case Rate.fastForward.rawValue:
             rate = 2.0
         default:
             rate = 1.0
@@ -85,7 +85,7 @@ class AVPlayerLayerViewController : UIViewController {
         updatePlayButtonTitle()
     }
     
-    @IBAction func volumeChanged(sender: UISlider) {
+    @IBAction func volumeChanged(_ sender: UISlider) {
         player.volume = sender.value
     }
     
@@ -112,11 +112,11 @@ class AVPlayerLayerViewController : UIViewController {
         updateRateSegmentedControl()
     }
     
-    func playerDidReachEndNotificationHandler(notification : NSNotification){
+    func playerDidReachEndNotificationHandler(_ notification : Notification){
         guard let playerItem = notification.object as? AVPlayerItem
             else { return }
         
-        playerItem.seekToTime(kCMTimeZero)
+        playerItem.seek(to: kCMTimeZero)
         
         if shouldLoop == false {
             player.pause()
@@ -130,10 +130,10 @@ class AVPlayerLayerViewController : UIViewController {
     
     func updatePlayButtonTitle() {
         if isPlaying {
-            playButton.setTitle("Pause", forState: .Normal)
+            playButton.setTitle("Pause", for: UIControlState())
         }
         else {
-            playButton.setTitle("Play", forState: .Normal)
+            playButton.setTitle("Play", for: UIControlState())
         }
     }
     
@@ -141,11 +141,11 @@ class AVPlayerLayerViewController : UIViewController {
         if isPlaying {
             switch player.rate {
             case 0.5:
-                rateSegmentedControl.selectedSegmentIndex = Rate.SlowForward.rawValue
+                rateSegmentedControl.selectedSegmentIndex = Rate.slowForward.rawValue
             case 1.0:
-                rateSegmentedControl.selectedSegmentIndex = Rate.Normal.rawValue
+                rateSegmentedControl.selectedSegmentIndex = Rate.normal.rawValue
             case 2.0:
-                rateSegmentedControl.selectedSegmentIndex = Rate.FastForward.rawValue
+                rateSegmentedControl.selectedSegmentIndex = Rate.fastForward.rawValue
             default:
                 break
             }

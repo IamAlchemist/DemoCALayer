@@ -20,23 +20,23 @@ class CAReplicatorLayerViewController : UIViewController {
     @IBOutlet var offsetSwitches: [UISwitch]!
     
     enum OffsetType : Int {
-        case Red, Green, Blue, Alpha
+        case red, green, blue, alpha
     }
 
     var replicatorLayer = CAReplicatorLayer();
-    let whiteColor = UIColor.whiteColor().CGColor
+    let whiteColor = UIColor.white.cgColor
     let lengthMultiplier : CGFloat = 3.0
     let instanceLayer = CALayer()
     let fadeAnimation = CABasicAnimation(keyPath: "opacity")
 
     // MARK: -
-    func offsetValueForSwitch(offsetType : OffsetType) -> Float {
+    func offsetValueForSwitch(_ offsetType : OffsetType) -> Float {
         switch offsetType {
-        case .Alpha:
+        case .alpha:
             let count = Float(replicatorLayer.instanceCount)
-            return offsetSwitches[offsetType.rawValue].on ? -1.0 / count : 0.0
-        case .Red, .Green, .Blue:
-            return offsetSwitches[offsetType.rawValue].on ? 0.0 : -0.05
+            return offsetSwitches[offsetType.rawValue].isOn ? -1.0 / count : 0.0
+        case .red, .green, .blue:
+            return offsetSwitches[offsetType.rawValue].isOn ? 0.0 : -0.05
         }
     }
     
@@ -47,17 +47,17 @@ class CAReplicatorLayerViewController : UIViewController {
         let count = Int(instanceCountSlider.value * 30)
         replicatorLayer.instanceCount = count
         replicatorLayer.instanceColor = whiteColor
-        replicatorLayer.instanceRedOffset = offsetValueForSwitch(.Red)
-        replicatorLayer.instanceGreenOffset = offsetValueForSwitch(.Green)
-        replicatorLayer.instanceBlueOffset = offsetValueForSwitch(.Blue)
-        replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(.Alpha)
+        replicatorLayer.instanceRedOffset = offsetValueForSwitch(.red)
+        replicatorLayer.instanceGreenOffset = offsetValueForSwitch(.green)
+        replicatorLayer.instanceBlueOffset = offsetValueForSwitch(.blue)
+        replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(.alpha)
         let angle = Float(M_PI * 2.0) / Float(count)
         replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat(angle), 0.0, 0.0, 1.0)
     }
     
     func setupInstanceLayer() {
         let layerWidth = CGFloat(Int(layerSizeSlider.value * 10))
-        let originX = CGFloat(Int(CGRectGetMidX(viewForReplicatorLayer.bounds) - layerWidth / 2.0))
+        let originX = CGFloat(Int(viewForReplicatorLayer.bounds.midX - layerWidth / 2.0))
         instanceLayer.frame = CGRect(x: originX, y: 0, width: layerWidth, height: layerWidth * lengthMultiplier)
         instanceLayer.backgroundColor = whiteColor
     }
@@ -71,7 +71,7 @@ class CAReplicatorLayerViewController : UIViewController {
     func setLayerFadeAnimation() {
         instanceLayer.opacity = 0
         fadeAnimation.duration = CFTimeInterval(instanceDelaySlider.value * 10)
-        instanceLayer.addAnimation(fadeAnimation, forKey: "FadeAnimation")
+        instanceLayer.add(fadeAnimation, forKey: "FadeAnimation")
     }
     
     func updateInstanceCountSliderValueLabel(){
@@ -83,7 +83,7 @@ class CAReplicatorLayerViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewForReplicatorLayer.backgroundColor = UIColor.blackColor()
+        viewForReplicatorLayer.backgroundColor = UIColor.black
         
         setupReplicatorLayer()
         viewForReplicatorLayer.layer.addSublayer(replicatorLayer)
@@ -107,18 +107,18 @@ class CAReplicatorLayerViewController : UIViewController {
     
     
     // MARK: -
-    @IBAction func instanceSizeChanged(sender: UISlider) {
+    @IBAction func instanceSizeChanged(_ sender: UISlider) {
         let value = CGFloat(sender.value * 10)
-        instanceLayer.bounds = CGRect(origin: CGPointZero, size: CGSize(width: value, height: value * lengthMultiplier))
+        instanceLayer.bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: value, height: value * lengthMultiplier))
     }
     
-    @IBAction func instanceCountChanged(sender: UISlider) {
+    @IBAction func instanceCountChanged(_ sender: UISlider) {
         replicatorLayer.instanceCount = Int(sender.value * 30)
-        replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(.Alpha)
+        replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(.alpha)
         updateInstanceCountSliderValueLabel()
     }
     
-    @IBAction func instanceDelayChanged(sender: UISlider) {
+    @IBAction func instanceDelayChanged(_ sender: UISlider) {
         if sender.value > 0.0 {
             replicatorLayer.instanceDelay = CFTimeInterval(sender.value * 10 / Float(replicatorLayer.instanceCount))
             setLayerFadeAnimation()
@@ -130,17 +130,17 @@ class CAReplicatorLayerViewController : UIViewController {
         }
     }
     
-    @IBAction func offsetSwitchChanged(sender: UISwitch) {
-        let offsetType = OffsetType(rawValue: offsetSwitches.indexOf(sender)!)!
+    @IBAction func offsetSwitchChanged(_ sender: UISwitch) {
+        let offsetType = OffsetType(rawValue: offsetSwitches.index(of: sender)!)!
         switch offsetType {
-        case .Red:
-            replicatorLayer.instanceRedOffset = offsetValueForSwitch(.Red)
-        case .Green:
-            replicatorLayer.instanceGreenOffset = offsetValueForSwitch(.Green)
-        case .Blue:
-            replicatorLayer.instanceBlueOffset = offsetValueForSwitch(.Blue)
-        case .Alpha:
-            replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(.Alpha)
+        case .red:
+            replicatorLayer.instanceRedOffset = offsetValueForSwitch(.red)
+        case .green:
+            replicatorLayer.instanceGreenOffset = offsetValueForSwitch(.green)
+        case .blue:
+            replicatorLayer.instanceBlueOffset = offsetValueForSwitch(.blue)
+        case .alpha:
+            replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(.alpha)
         }
     }
 }

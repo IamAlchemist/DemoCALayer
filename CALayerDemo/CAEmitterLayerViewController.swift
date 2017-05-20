@@ -20,10 +20,10 @@ class CAEmitterViewController : UIViewController {
         emitter.emitterPosition = CGPoint(x: emitter.frame.width / 2.0, y: emitter.frame.height / 2)
         
         let cell = CAEmitterCell()
-        cell.contents = UIImage(named: "smallStar")?.CGImage
+        cell.contents = UIImage(named: "smallStar")?.cgImage
         cell.birthRate = 150
         cell.lifetime = 5.0
-        cell.color = UIColor(red: 1, green: 0.5, blue: 0.1, alpha: 1.0).CGColor
+        cell.color = UIColor(red: 1, green: 0.5, blue: 0.1, alpha: 1.0).cgColor
         cell.alphaSpeed = -0.4
         cell.velocity = 50
         cell.velocityRange = 50

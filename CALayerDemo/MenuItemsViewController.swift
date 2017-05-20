@@ -32,13 +32,13 @@ class MenuItemsViewController : UITableViewController {
     var detailViewController : UIViewController!
     
     // MARK: - UITableViewDataSource
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MenuItemCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell")!
         cell.textLabel?.text = menuItems[indexPath.row].0
         cell.detailTextLabel?.text = menuItems[indexPath.row].1
         cell.imageView?.image = UIImage(named: menuItems[indexPath.row].0)
@@ -47,13 +47,13 @@ class MenuItemsViewController : UITableViewController {
     }
     
     // MARK: - UITableViewDelegate
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let identifier = menuItems[indexPath.row].0
-        navController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(identifier) as! UINavigationController
+        navController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier) as! UINavigationController
         detailViewController = navController.topViewController
         
-        detailViewController?.navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem()
+        detailViewController?.navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
         detailViewController?.navigationItem.leftItemsSupplementBackButton = true
         
         splitViewController?.showDetailViewController(navController, sender: nil)

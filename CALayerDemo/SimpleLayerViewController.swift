@@ -23,21 +23,21 @@ class SimpleLayerViewController: UIViewController {
     }
 
     func setupFirstLayer() {
-        firstLayer.backgroundColor = UIColor.blueColor().CGColor
+        firstLayer.backgroundColor = UIColor.blue.cgColor
         firstLayer.borderWidth = 100
-        firstLayer.borderColor = UIColor.redColor().CGColor
+        firstLayer.borderColor = UIColor.red.cgColor
         firstLayer.shadowOpacity = 0.7
         firstLayer.shadowRadius = 10
         
-        firstLayer.contents = UIImage(named: "star")?.CGImage
+        firstLayer.contents = UIImage(named: "star")?.cgImage
         firstLayer.contentsGravity = kCAGravityCenter
     }
 
-    @IBAction func tapGestureRecognized(sender: UITapGestureRecognizer) {
+    @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         firstLayer.shadowOpacity = firstLayer.shadowOpacity == 0.7 ? 0.0 : 0.7
     }
     
-    @IBAction func pinchGestureRecognized(sender: UIPinchGestureRecognizer) {
+    @IBAction func pinchGestureRecognized(_ sender: UIPinchGestureRecognizer) {
         let offset : CGFloat = sender.scale < 1 ? 5.0 : -5.0
         let oldFrame = firstLayer.frame
         let oldOrigin = oldFrame.origin
