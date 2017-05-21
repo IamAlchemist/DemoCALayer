@@ -111,7 +111,13 @@ class CAGradientLayerViewController : UIViewController {
         }
         
         gradientLayer.colors = gradientLayerColors
-        gradientLayer.locations = locations.count > 1 ? locations : nil
+        if locations.count > 1 {
+            gradientLayer.locations = locations as [NSNumber]
+        }
+        else {
+            gradientLayer.locations = nil
+        }
+
         updateLocationSliderValueLabels()
     }
     
